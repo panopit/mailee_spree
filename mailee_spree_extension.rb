@@ -11,6 +11,7 @@ class MaileeSpreeExtension < Spree::Extension
     ActiveRecord::Base.send(:include, Mailee::Sync)
     User.class_eval do 
       sync_with_mailee
+      attr_accessible :news
     end 
   
   end
@@ -21,4 +22,12 @@ class MaileeSpreeExtension < Spree::Extension
 
   def deactivate
   end
+  
+  
+  
+#  Spree::UsersController.class_eval do
+#    def create
+#      raise params.inspect
+#    end
+#  end
 end

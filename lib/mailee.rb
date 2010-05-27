@@ -80,8 +80,8 @@ module Mailee
             create_in_mailee # Se não achou o contato tem q inserir.
           end
         end
-#      rescue
- #       logger.warn "MAILEE-API: Falhou ao atualizar o contato #{id} no Mailee"
+      rescue
+        logger.warn "MAILEE-API: Falhou ao atualizar o contato #{id} no Mailee"
       end
 
       def destroy_in_mailee contact=nil
